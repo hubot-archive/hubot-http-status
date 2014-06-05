@@ -1,0 +1,26 @@
+{
+  "name": "hubot-http",
+  "version": "0.1.1",
+  "description": "Returns HTTP status/error code definitions from wikipedia.",
+  "main": "index.coffee",
+  "scripts": {
+    "test": "script/test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/delianides/hubot-http"
+  },
+  "keywords": [
+    "hubot",
+    "wikipedia",
+    "api",
+    "http",
+    "error"
+  ],
+  "author": "Drew Delianides",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/delianides/hubot-http/issues"
+  },
+  "homepage": "https://github.com/delianides/hubot-http"
+}
