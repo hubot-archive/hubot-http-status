@@ -19,6 +19,16 @@
   ],
   "author": "Drew Delianides",
   "license": "MIT",
+  "dependencies": {
+    "coffee-script": "~1.6",
+    "cheerio": "~0.16.0"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "chai": "*",
+    "sinon-chai": "*",
+    "sinon": "*"
+  },
   "bugs": {
     "url": "https://github.com/delianides/hubot-http/issues"
   },

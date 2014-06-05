@@ -2,20 +2,19 @@
 #   Displays the description for the requested error code.
 #
 # Dependencies:
-#   jsdom, jquery
+#   "cheerio": "~0.16.0"
 #
 # Configuration:
 #   None
 #
 # Commands:
-#   hubot http status ###
+#   hubot http status <code>
 #
 # Author:
 #   delianides
 #
 
-jsdom = require "jsdom"
-jquery = 'http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js'
+cheerio = require 'cheerio'
 
 module.exports = (robot) ->
   robot.respond /http status (.*)/i, (msg) ->
@@ -23,8 +22,8 @@ module.exports = (robot) ->
     msg
       .http('http://en.wikipedia.org/wiki/List_of_HTTP_status_codes')
       .get() (err, res, body) ->
-        jsdom.env body, [jquery], (errors, window) ->
-          statusCode = window.$('#'+httpCode).parent().text()
+          $ = cheerio.load(body)
+          statusCode = $('#'+httpCode).parent().text()
           if statusCode
             msg.send statusCode
             msg.send "http://en.wikipedia.org/wiki/List_of_HTTP_status_codes##{httpCode}"
