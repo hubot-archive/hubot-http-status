@@ -1,6 +1,6 @@
 {
   "name": "hubot-http-status",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Returns HTTP status/error code definitions from wikipedia.",
   "main": "index.coffee",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/delianides/hubot-http-status
+    "url": "https://github.com/delianides/hubot-http-status"
   },
   "keywords": [
     "hubot",
