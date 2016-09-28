@@ -1,6 +1,6 @@
 {
   "name": "hubot-http-status",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Returns HTTP status/error code definitions from wikipedia.",
   "main": "index.coffee",
   "scripts": {

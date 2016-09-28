@@ -17,8 +17,8 @@
 cheerio = require 'cheerio'
 
 module.exports = (robot) ->
-  robot.respond /http status (.*)/i, (msg) ->
-    httpCode = msg.match[1]
+  robot.respond /http(s?) status (.*)/i, (msg) ->
+    httpCode = msg.match[2]
     msg
       .http('https://en.wikipedia.org/wiki/List_of_HTTP_status_codes')
       .get() (err, res, body) ->
